@@ -1,0 +1,27 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+{% endblock %}
+{% block title %}Find all the products you were looking for here ✨{% endblock %}
+{% block main %}
+    <article class="conatiner-cards">
+        {%  for product in products %}    
+        <div class="card">
+            {% if not product.img == 'null' %}
+                <img src="{{product.img.url}}" alt="Product Img">
+            {% endif %}
+            <div>
+                <a  class="name" href="{% url 'product' id=product.id %}">{{product.name}}</a>
+                <span class="price">${{ product.price }}</span>
+            </div>
+            <div>
+                <a class="btn" href="{% url 'delete' id=product.id %}" style="background-color: #f2331a;">Delete</a>
+                <a class="btn" href="{% url 'update' id=product.id %}" style="background-color: #acb900;">Update</a>
+            </div>
+        </div>
+        {% empty %}
+        <h2>There are no products</h2>
+        {% endfor %}     
+    </article>
+{% endblock %}

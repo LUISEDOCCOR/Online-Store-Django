@@ -1,0 +1,38 @@
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-products{
+    border-radius: 7px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.container-products img{
+    border-radius: 7px;
+    max-height: 30vh ;
+}
+.container-products > :first-child{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.container-products > :first-child div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.2em;
+    font-weight: 700;
+}
+.container-products > :last-child{
+    display: flex;
+    justify-content: center;
+}
+.container-products > :last-child p{
+    width: 40%;
+    font-size: 1.1em;
+    line-height: 30px;
+    font-weight: 500;
+}

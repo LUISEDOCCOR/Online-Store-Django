@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/layout.css' %}">
+    {% block css %}{% endblock %}
+    {% block js %}{% endblock %}
+    <title>Online Store</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <span>Online store</span>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/product/add/">Add</a></li>
+                <li><a href="/user/login">Login</a></li>
+            </ul>              
+        </nav>
+        <div class="container-header">
+            <h1>{% block title %}{% endblock %}</h1>
+        </div>
+    </header>
+    <main>
+        {% block main %}{% endblock %}
+    </main>
+</body>
+</html>

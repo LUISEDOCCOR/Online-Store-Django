@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+{% load static %}
+{% block css%}
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+{% endblock %}
+{%block main%}
+    <article class="container-products">
+        <div class="conatiner-img-text">
+            <div>
+                <img src="{{ product.img.url }}" alt="prdouct_img">
+            </div>
+            <div>
+                <div>
+                    <span>{{ product.name }}</span>
+                    <span>${{ product.price }}</span>
+                    <span>{% if product.available %}Available{% else %} Not available {%endif%}</span>
+                </div>
+            </div>
+        </div>
+        <div>
+            <p>
+                {{ product.text }}
+            </p>
+        </div>
+    </article>
+{% endblock %}

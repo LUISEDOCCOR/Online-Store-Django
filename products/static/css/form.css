@@ -1,0 +1,55 @@
+.conatiner-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2em;
+    font-weight: 400;
+}
+.conatiner-form form, form div{
+    display: flex;
+    flex-direction: column;
+}
+.conatiner-form form{
+    gap: 30px;
+}
+.conatiner-form form div{
+    gap: 10px;
+}
+.conatiner-form form input:not([type="submit"]), textarea, .password{
+    font-size: .9em;
+    font-weight: 500;
+    padding: 10px;
+    width: 350px;
+    border-radius: 10px;
+    border: none !important;
+}
+.conatiner-form form div:has(.available){
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.conatiner-form form div:has(.available) input{
+    width: 20px;
+    height: 25px;
+}
+.conatiner-form form textarea{
+    height: 150px;
+}
+.conatiner-btn{
+    display: block;
+    width: 100%;
+}
+.conatiner-btn input{
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: .8em;
+    background-color: #277e1c;
+    border: none;
+    transition: .3s;
+}
+.conatiner-btn input:hover{
+    opacity: .7;
+}
